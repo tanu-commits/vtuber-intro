@@ -52,24 +52,6 @@
     section p {
       font-size: 1.05rem;
     }
-    ul.game-list {
-      list-style: disc inside;
-      padding-left: 1rem;
-      font-size: 1.05rem;
-    }
-    ul.game-list li {
-      margin-bottom: 0.8rem;
-    }
-    ul.game-list a {
-      color: #d81b60;
-      text-decoration: none;
-      font-weight: bold;
-      margin-left: 0.5rem;
-      font-size: 0.95rem;
-    }
-    ul.game-list a:hover {
-      text-decoration: underline;
-    }
     .timeline {
       border-left: 4px solid #d81b60;
       padding-left: 1rem;
@@ -89,6 +71,23 @@
     .back-link:hover {
       text-decoration: underline;
     }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
@@ -97,7 +96,7 @@
   </header>
   <main>
     <div class="image-section">
-      <img src="KizunaAI_2.avif" alt="キズナアイの画像" />
+      <img src="KizunaAI_2.avif" alt="キズナアイの画像">
     </div>
 
     <section>
@@ -120,25 +119,22 @@
 
     <section>
       <h2>③ プレイしたゲーム</h2>
-      <p>キズナアイはYouTube活動の中で様々なゲーム実況を行っています。代表的なゲームは以下の通りです。</p>
-      <ul class="game-list">
-        <li>
-          <strong>Minecraft（マインクラフト）</strong>  
-          <a href="https://www.youtube.com/watch?v=wLs-7XelH-I" target="_blank" rel="noopener noreferrer">実況動画例</a>
-        </li>
-        <li>
-          <strong>Among Us（アモングアス）</strong>  
-          <a href="https://www.youtube.com/watch?v=hoNt6IqEqkA" target="_blank" rel="noopener noreferrer">実況動画例</a>
-        </li>
-        <li>
-          <strong>Apex Legends（エーペックスレジェンズ）</strong>  
-          <a href="https://www.youtube.com/watch?v=4dNuj_KZXaE" target="_blank" rel="noopener noreferrer">実況動画例</a>
-        </li>
-        <li><strong>スプラトゥーン2</strong></li>
-        <li><strong>バイオハザードシリーズ</strong></li>
-        <li><strong>Dead by Daylight（デッド・バイ・デイライト）</strong></li>
-        <li><strong>その他</strong> 『ファイナルファンタジー』シリーズ、『モンスターハンター』シリーズ、『ARK: Survival Evolved』など。</li>
-      </ul>
+      <p>キズナアイはYouTube活動の中で様々なゲーム実況を行っています。代表的なゲームの実況動画を以下でご覧いただけます。</p>
+
+      <h3>Minecraft（マインクラフト）</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/wLs-7XelH-I" allowfullscreen loading="lazy" title="キズナアイ Minecraft 実況"></iframe>
+      </div>
+
+      <h3>Among Us（アモングアス）</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/hoNt6IqEqkA" allowfullscreen loading="lazy" title="キズナアイ Among Us 実況"></iframe>
+      </div>
+
+      <h3>Apex Legends（エーペックスレジェンズ）</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/4dNuj_KZXaE" allowfullscreen loading="lazy" title="キズナアイ Apex Legends 実況"></iframe>
+      </div>
     </section>
 
     <section>
