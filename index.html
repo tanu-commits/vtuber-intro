@@ -1,85 +1,122 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>おすすめVtuber紹介サイト</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vtuber紹介ポータル</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #e0f7fa, #fff3e0);
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      color: #222;
     }
     header {
-      background-color: #ff8a65;
+      background: #dfe6e9;
       padding: 1.5rem;
       text-align: center;
-      color: white;
-      font-size: 2rem;
+      border-bottom: 2px solid #b2bec3;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #f1f2f6;
+      border-bottom: 1px solid #dcdde1;
+    }
+    nav a {
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      color: #2d3436;
+      border: 2px solid #74b9ff;
+      border-radius: 6px;
       font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #dfefff;
+      transition: background 0.3s;
     }
-    main {
+    nav a:hover {
+      background-color: #74b9ff;
+      color: white;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
       padding: 2rem;
-      text-align: center;
-    }
-    .intro {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
     }
     .card {
-      display: inline-block;
-      background-color: white;
-      padding: 2rem;
-      margin: 1rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+      border: 2px solid #dcdde1;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
     }
     .card:hover {
       transform: translateY(-5px);
     }
-    .card-title {
-      font-size: 1.5rem;
-      color: #ff7043;
-      margin-bottom: 1rem;
+    .card h2 {
+      margin-top: 0;
+      color: #0984e3;
     }
-    .footer {
+    .card a {
+      text-decoration: none;
+      color: #0984e3;
+      font-weight: bold;
+    }
+    footer {
       text-align: center;
+      padding: 2rem 1rem;
+      background-color: #dfe6e9;
       font-size: 0.9rem;
-      color: #999;
-      margin-top: 3rem;
-      padding-bottom: 2rem;
+      color: #636e72;
     }
   </style>
 </head>
 <body>
   <header>
-    おすすめVtuber紹介サイト
+    <h1>Vtuber紹介ポータル</h1>
   </header>
-  <main>
-    <div class="intro">
-      このサイトでは、Vtuberにあまり詳しくない方でも楽しめるよう、厳選したおすすめVtuberを一人ずつ丁寧に紹介していきます。
+
+  <nav>
+    <a href="#independent">個人勢</a>
+    <a href="#hololive">ホロライブ</a>
+    <a href="#vspo">ぶいすぽっ!</a>
+    <a href="#nijisanji">にじさんじ</a>
+  </nav>
+
+  <main class="container">
+    <div class="card" id="independent">
+      <h2>個人勢</h2>
+      <p>独立して活動しているVtuberの紹介です。</p>
+      <a href="independent/index.html">詳細を見る</a>
     </div>
-    <div class="card" onclick="goToPage('kizunaai.html')">
-      <div class="card-title">第1回：キズナアイ</div>
-      <div>バーチャルYouTuberのパイオニア。近年の活動や魅力について紹介！</div>
+    <div class="card" id="hololive">
+      <h2>ホロライブ</h2>
+      <p>カバー株式会社が運営するVtuberグループ。</p>
+      <a href="hololive/index.html">詳細を見る</a>
     </div>
-    <div class="card" onclick="goToPage('vtuber2.html')">
-      <div class="card-title">第2回：宝鐘マリン</div>
-      <div>ホロライブ所属の人気Vtuber。トーク力と表現力に注目！</div>
+    <div class="card" id="vspo">
+      <h2>ぶいすぽっ!</h2>
+      <p>eスポーツをテーマにしたVtuberユニット。</p>
+      <a href="vspo/index.html">詳細を見る</a>
+    </div>
+    <div class="card" id="nijisanji">
+      <h2>にじさんじ</h2>
+      <p>ANYCOLOR株式会社が展開するVtuberプロジェクト。</p>
+      <a href="nijisanji/index.html">詳細を見る</a>
     </div>
   </main>
-  <div class="footer">
-    &copy; 2025 おすすめVtuber紹介プロジェクト
-  </div>
 
-  <script>
-    function goToPage(page) {
-      window.location.href = page;
-    }
-  </script>
+  <footer>
+    &copy; 2025 Vtuber紹介ポータル
+  </footer>
 </body>
 </html>
