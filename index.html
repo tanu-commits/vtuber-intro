@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <title>おすすめVtuber紹介</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おすすめVtuber紹介サイト</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 1em; }
-    header { text-align: center; margin-bottom: 2em; }
-    section { border-bottom: 1px solid #ccc; padding-bottom: 1.5em; margin-bottom: 1.5em; }
-    h2 { color: #333; }
-    .profile-img { float: right; width: 150px; margin-left: 1em; border-radius: 8px; }
-    .clear { clear: both; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to right, #e0f7fa, #fff3e0);
+      color: #333;
+    }
+    header {
+      background-color: #ff8a65;
+      padding: 1.5rem;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .card {
+      display: inline-block;
+      background-color: white;
+      padding: 2rem;
+      margin: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-title {
+      font-size: 1.5rem;
+      color: #ff7043;
+      margin-bottom: 1rem;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+      margin-top: 3rem;
+      padding-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>おすすめのVtuber紹介</h1>
-    <p>Vtuberにあまり詳しくない人向けに人気のVtuberを紹介します。</p>
+    おすすめVtuber紹介サイト
   </header>
+  <main>
+    <div class="intro">
+      このサイトでは、Vtuberにあまり詳しくない方でも楽しめるよう、厳選したおすすめVtuberを一人ずつ丁寧に紹介していきます。
+    </div>
+    <div class="card" onclick="goToPage('vtuber1.html')">
+      <div class="card-title">第1回：キズナアイ</div>
+      <div>バーチャルYouTuberのパイオニア。近年の活動や魅力について紹介！</div>
+    </div>
+    <div class="card" onclick="goToPage('vtuber2.html')">
+      <div class="card-title">第2回：宝鐘マリン</div>
+      <div>ホロライブ所属の人気Vtuber。トーク力と表現力に注目！</div>
+    </div>
+  </main>
+  <div class="footer">
+    &copy; 2025 おすすめVtuber紹介プロジェクト
+  </div>
 
-  <section id="vtuber1">
-    <h2>キズナアイ (Kizuna AI)</h2>
-    <img src="https://example.com/kizuna_ai.jpg" alt="キズナアイ" class="profile-img" />
-    <h3>バックボーン</h3>
-    <p>日本で初めてのバーチャルYouTuberとされ、2016年にデビュー。AIという設定で、ゲーム実況や歌、トークを中心に活動。</p>
-
-    <h3>活動内容</h3>
-    <p>YouTubeチャンネルでゲーム実況、歌ってみた、トーク配信など幅広いジャンルを配信。世界中に多くのファンを持つ。</p>
-
-    <h3>イベント</h3>
-    <p>オンラインライブやコラボイベントを開催。ファンミーティングも行われる。</p>
-    <div class="clear"></div>
-  </section>
-
-  <!-- ここに次のVtuberのセクションを追加 -->
-
+  <script>
+    function goToPage(page) {
+      window.location.href = page;
+    }
+  </script>
 </body>
 </html>
