@@ -2,213 +2,112 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="xCsQeuTivykEh6GA306nJk_VBhZofeNQaLNl_Gl9INU" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vtuber紹介ポータル</title>
+  <meta name="description" content="VTuberとその配信ゲームを紹介するサイト。バーチャルYouTuberキズナアイの魅力とゲーム実況を中心に紹介。">
+  <title>VTuber × ゲーム 紹介サイト</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
       color: #222;
+      line-height: 1.8;
     }
     header {
-      background: linear-gradient(90deg, #ff7eb9, #ff65a3);
-      padding: 1.5rem;
+      background: linear-gradient(to right, #f8bbd0, #fce4ec);
+      padding: 2rem 1rem;
       text-align: center;
-      color: white;
-      font-weight: bold;
-      font-size: 2.8rem;
-      letter-spacing: 1.2px;
-      box-shadow: 0 4px 8px rgba(255,101,163,0.4);
     }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav a {
-      padding: 0.6rem 1.4rem;
-      border-radius: 20px;
-      font-weight: 600;
-      color: #555;
-      background-color: #e4e9f2;
-      text-decoration: none;
-      transition: background-color 0.3s, color 0.3s;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    nav a:hover {
-      background-color: #ff65a3;
-      color: white;
-      box-shadow: 0 4px 10px rgba(255,101,163,0.6);
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #c2185b;
     }
     main {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
     }
-    section {
-      border-radius: 12px;
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .vtuber-section, .game-section {
       margin-bottom: 3rem;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-      background-color: white;
-      transition: transform 0.2s ease;
     }
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(255,101,163,0.2);
-    }
-    section h2 {
-      margin-top: 0;
-      font-size: 1.8rem;
+    .section-title {
+      font-size: 2rem;
+      color: #d81b60;
       margin-bottom: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
+      border-bottom: 2px solid #f8bbd0;
+      padding-bottom: 0.5rem;
     }
-    section p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 1.4rem;
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      margin-bottom: 2rem;
     }
-    .vtuber-list {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-    }
-    .vtuber-card {
-      width: 120px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.25s ease;
-    }
-    .vtuber-card:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 4px 6px rgba(255,101,163,0.4));
-    }
-    .vtuber-card img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #ff65a3;
-      background: white;
-    }
-    .vtuber-name {
-      margin-top: 0.5rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #333;
-    }
-    /* グループ別カラー */
-    #independent { border-left: 6px solid #ff9a9e; }
-    #hololive { border-left: 6px solid #6a11cb; background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); color: white; }
-    #vspo { border-left: 6px solid #43cea2; background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%); color: white; }
-    #nijisanji { border-left: 6px solid #ff9a00; background: linear-gradient(135deg, #ff9a00 0%, #ff5400 100%); color: white; }
-    /* テキスト色補正 */
-    #hololive p, #vspo p, #nijisanji p {
-      color: #f0e9ff;
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      font-size: 0.9rem;
+      background: #fce4ec;
       color: #888;
-      background-color: #fff;
-      border-top: 1px solid #ddd;
-      margin-top: 3rem;
-    }
-    @media (max-width: 600px) {
-      nav {
-        flex-wrap: wrap;
-      }
-      .vtuber-list {
-        justify-content: center;
-      }
     }
   </style>
 </head>
 <body>
-  <header>Vtuber紹介ポータル</header>
-
-  <nav>
-    <a href="#independent">個人勢</a>
-    <a href="#hololive">ホロライブ</a>
-    <a href="#vspo">ぶいすぽっ!</a>
-    <a href="#nijisanji">にじさんじ</a>
-  </nav>
-
+  <header>
+    <h1>VTuber × ゲーム紹介サイト</h1>
+  </header>
   <main>
-    <section id="independent">
-      <h2>個人勢</h2>
-      <p>独立して活動しているVtuberの紹介です。</p>
-      <div class="vtuber-list">
-        <a class="vtuber-card" href="kizunaai.html">
-          <img src="img-bio-kv-sp.png" alt="キズナアイ" />
-          <div class="vtuber-name">キズナアイ</div>
-        </a>
-        <a class="vtuber-card" href="independent/shirakamifubuki.html">
-          <img src="https://yt3.ggpht.com/ytc/AKedOLQK5yyRH1QbSpgrqN4L6nvBr-wPQgOvXmxjz6Kl=s176-c-k-c0x00ffffff-no-rj" alt="ピーナッツくん" />
-          <div class="vtuber-name">ピーナッツくん</div>
-        </a>
+    <div class="intro">
+      <p>本サイトでは、人気VTuberとそのVTuberがプレイしているゲームを紹介します。VTuberの魅力と、実況されているゲームの面白さの両面にフォーカスしてお届けします。</p>
+    </div>
+
+    <section class="vtuber-section">
+      <h2 class="section-title">注目のVTuber</h2>
+      <p><strong>キズナアイ：</strong> 世界初のバーチャルYouTuberとして登場し、トークや歌、ゲーム実況で人気を集めた存在。明るく元気な性格と高い技術で、多くのファンを魅了しています。</p>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/6dAiqDPZcW0" title="キズナアイ 紹介動画" allowfullscreen></iframe>
       </div>
+      <p><a href="kizunaai.html">▶ キズナアイの詳細ページへ</a></p>
     </section>
 
-    <section id="hololive">
-      <h2>ホロライブ</h2>
-      <p>カバー株式会社が運営するVtuberグループです。</p>
-      <div class="vtuber-list">
-        <a class="vtuber-card" href="hololive/sakuramiko.html">
-          <img src="https://yt3.ggpht.com/ytc/AKedOLTIVP9FgV9FijC9w9x7TXbtzT7v9z9Txw2Bv8i8=s176-c-k-c0x00ffffff-no-rj" alt="さくらみこ" />
-          <div class="vtuber-name">さくらみこ</div>
-        </a>
-        <a class="vtuber-card" href="hololive/shirakamifubuki.html">
-          <img src="https://yt3.ggpht.com/ytc/AKedOLQK5yyRH1QbSpgrqN4L6nvBr-wPQgOvXmxjz6Kl=s176-c-k-c0x00ffffff-no-rj" alt="白上フブキ" />
-          <div class="vtuber-name">白上フブキ</div>
-        </a>
-      </div>
-    </section>
+    <section class="game-section">
+      <h2 class="section-title">配信されたゲーム</h2>
+      <p>キズナアイが実況した人気ゲームを紹介します。初心者にも親しみやすく、見ているだけでも楽しめる作品が満載です。</p>
 
-    <section id="vspo">
-      <h2>ぶいすぽっ!</h2>
-      <p>eスポーツをテーマにしたVtuberユニットです。</p>
-      <div class="vtuber-list">
-        <a class="vtuber-card" href="vspo/shiina.html">
-          <img src="https://pbs.twimg.com/profile_images/1384163174088906497/eSv_XF1d_400x400.jpg" alt="椎名唯華" />
-          <div class="vtuber-name">椎名唯華</div>
-        </a>
-        <a class="vtuber-card" href="vspo/other.html">
-          <img src="https://via.placeholder.com/120" alt="メンバー" />
-          <div class="vtuber-name">メンバー</div>
-        </a>
+      <h3>Minecraft（マインクラフト）</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/wLs-7XelH-I" allowfullscreen loading="lazy" title="キズナアイ Minecraft 実況"></iframe>
       </div>
-    </section>
 
-    <section id="nijisanji">
-      <h2>にじさんじ</h2>
-      <p>ANYCOLOR株式会社が展開するVtuberプロジェクトです。</p>
-      <div class="vtuber-list">
-        <a class="vtuber-card" href="nijisanji/tsukino.html">
-          <img src="https://yt3.ggpht.com/ytc/AKedOLQvKaX__cbiMknWh6IDwRIE3FbR36D3yb4jwGkP=s176-c-k-c0x00ffffff-no-rj" alt="月ノ美兎" />
-          <div class="vtuber-name">月ノ美兎</div>
-        </a>
-        <a class="vtuber-card" href="nijisanji/kuzuha.html">
-          <img src="https://yt3.ggpht.com/ytc/AKedOLQVrldcFv6DkP-6Piw90Clo97zIK0tUu4WyTc4i=s176-c-k-c0x00ffffff-no-rj" alt="葛葉" />
-          <div class="vtuber-name">葛葉</div>
-        </a>
+      <h3>Among Us（アモングアス）</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/hoNt6IqEqkA" allowfullscreen loading="lazy" title="キズナアイ Among Us 実況"></iframe>
+      </div>
+
+      <h3>Apex Legends（エーペックスレジェンズ）</h3>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/4dNuj_KZXaE" allowfullscreen loading="lazy" title="キズナアイ Apex Legends 実況"></iframe>
       </div>
     </section>
   </main>
-
   <footer>
-    &copy; 2025 Vtuber紹介ポータル
+    &copy; 2025 VTuber Game Info. All rights reserved.
   </footer>
 </body>
 </html>
