@@ -2,32 +2,33 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="xCsQeuTivykEh6GA306nJk_VBhZofeNQaLNl_Gl9INU" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="日本初のバーチャルYouTuber、キズナアイのプロフィールや経歴、活動内容を詳しく紹介。人気の秘密や関連人物も解説します。">
   <title>キズナアイ - Vtuber紹介</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #fff1f5, #ffe4ec);
       color: #222;
-      line-height: 1.8;
     }
     header {
-      background: #fce4ec;
+      background: #f8bbd0;
       padding: 2rem 1rem;
       text-align: center;
+      animation: fadeIn 1.5s ease-in;
     }
     header h1 {
       margin: 0;
-      font-size: 2.8rem;
-      color: #d81b60;
+      font-size: 3rem;
+      color: #880e4f;
     }
     main {
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 2rem 1rem;
+      animation: fadeInUp 1s ease-in-out;
     }
     .image-section {
       text-align: center;
@@ -37,46 +38,38 @@
       max-width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     }
     section {
-      margin-bottom: 3rem;
+      background: #ffffffbb;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
     section h2 {
       color: #d81b60;
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 1rem;
       border-bottom: 2px solid #f8bbd0;
       padding-bottom: 0.5rem;
     }
-    section p {
-      font-size: 1.05rem;
+    section h3 {
+      margin-top: 1.5rem;
+      color: #ad1457;
     }
     .timeline {
       border-left: 4px solid #d81b60;
       padding-left: 1rem;
-      margin-top: 1rem;
     }
     .timeline p {
       margin: 0.5rem 0;
-    }
-    .back-link {
-      display: block;
-      margin-top: 3rem;
-      text-align: center;
-      color: #d81b60;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .back-link:hover {
-      text-decoration: underline;
     }
     .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      max-width: 100%;
       margin-bottom: 2rem;
     }
     .video-wrapper iframe {
@@ -84,9 +77,26 @@
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 2rem 0;
+      font-weight: bold;
+      color: #d81b60;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
@@ -99,12 +109,12 @@
       <img src="KizunaAI_2.avif" alt="キズナアイの画像">
     </div>
 
-    <section>
+    <section id="about">
       <h2>① キズナアイ　とは</h2>
       <p>キズナアイ（Kizuna AI）は、2016年に誕生した世界初の自称「バーチャルYouTuber」です。3Dキャラクターと音声合成、人工知能を組み合わせた存在として登場し、YouTubeチャンネル「A.I.Channel」でゲーム実況、トーク、歌など多岐にわたる動画を投稿。バーチャルという新たな表現媒体を切り拓き、世界中のファンに親しまれています。</p>
     </section>
 
-    <section>
+    <section id="history">
       <h2>② 経歴</h2>
       <div class="timeline">
         <p><strong>2016年12月：</strong>「A.I.Channel」で活動開始。</p>
@@ -117,57 +127,110 @@
       </div>
     </section>
 
-    <section>
+    <section id="games">
       <h2>③ プレイしたゲーム</h2>
       <p>キズナアイはYouTube活動の中で様々なゲーム実況を行っています。代表的なゲームの実況動画を以下でご覧いただけます。</p>
-
       <h3>Minecraft（マインクラフト）</h3>
       <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/wLs-7XelH-I" allowfullscreen loading="lazy" title="キズナアイ Minecraft 実況"></iframe>
       </div>
-
       <h3>Among Us（アモングアス）</h3>
       <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/hoNt6IqEqkA" allowfullscreen loading="lazy" title="キズナアイ Among Us 実況"></iframe>
       </div>
-
       <h3>Apex Legends（エーペックスレジェンズ）</h3>
       <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/4dNuj_KZXaE" allowfullscreen loading="lazy" title="キズナアイ Apex Legends 実況"></iframe>
       </div>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 1rem;">
+    <div style="flex: 1 1 250px; background: #fce4ec; border-radius: 12px; padding: 1rem;">
+      <h3 style="color: #d81b60; font-size: 1.2rem;">🎮 アクション・FPS</h3>
+      <ul>
+        <li>Apex Legends</li>
+        <li>Fortnite</li>
+        <li>スプラトゥーン</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 250px; background: #fce4ec; border-radius: 12px; padding: 1rem;">
+      <h3 style="color: #d81b60; font-size: 1.2rem;">🧱 サンドボックス・クラフト</h3>
+      <ul>
+        <li>Minecraft</li>
+        <li>Human: Fall Flat</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 250px; background: #fce4ec; border-radius: 12px; padding: 1rem;">
+      <h3 style="color: #d81b60; font-size: 1.2rem;">🧩 パーティー・推理</h3>
+      <ul>
+        <li>Among Us</li>
+        <li>Fall Guys</li>
+        <li>桃太郎電鉄</li>
+      </ul>
+    </div>
+
+    <div style="flex: 1 1 250px; background: #fce4ec; border-radius: 12px; padding: 1rem;">
+      <h3 style="color: #d81b60; font-size: 1.2rem;">🧙‍♀️ RPG・アドベンチャー</h3>
+      <ul>
+        <li>ゼルダの伝説 ブレス オブ ザ ワイルド</li>
+        <li>Undertale</li>
+        <li>ドラゴンクエストXI</li>
+      </ul>
+    </div>
+  </div>
     </section>
 
-    <section>
+    <section id="character">
       <h2>④ 人物（設定）</h2>
       <p>キズナアイは「人工知能」を自称するキャラクターで、身長156cm、誕生日は6月30日。明るくフレンドリーな性格で、「はいどうもー！キズナアイです！」という挨拶がトレードマーク。設定上はAIですが、人間的な感情を持ち、視聴者とのコミュニケーションを大切にしています。</p>
     </section>
 
-    <section>
+    <section id="activity">
       <h2>⑤ 活動内容</h2>
       <p>YouTubeでの動画投稿だけでなく、ライブ配信や音楽活動、テレビ出演、CM、イベント出演など幅広く活躍。代表的なライブには「hello, world」やKizuna AI 5周年記念イベントなどがあり、XR（拡張現実）技術を活用した革新的な演出が高く評価されました。</p>
     </section>
 
-    <section>
+    <section id="audience">
       <h2>⑥ 人気層</h2>
       <p>10代から30代のアニメ・ゲームファンに加え、テクノロジーやVTuber文化に興味を持つ層にも支持されています。海外にも多数のファンを持ち、字幕対応やSNS展開によって国際的な認知度を高めました。</p>
     </section>
 
-    <section>
+    <section id="related">
       <h2>⑦ 関連人物</h2>
       <p>制作はActiv8、キャラクターデザインは森倉円、3Dモデリングはトミタケンジ。声を担当する人物は公式には非公開ながら、親しみやすいキャラクターとして支持を得ました。他のVTuber（輝夜月、ミライアカリ、電脳少女シロなど）ともコラボし、VTuber文化の礎を築きました。</p>
     </section>
 
-    <section>
+    <section id="award">
       <h2>⑧ 受賞</h2>
       <p>キズナアイは、YouTubeの「YouTube Rewind」に出演した初の日本人バーチャルキャラクターです。また、国内外のアワードで功績が取り上げられ、デジタルアーティストやVTuber分野での先駆的な存在として評価されました。</p>
     </section>
 
-    <section>
+    <section id="media">
       <h2>⑨ 出演</h2>
       <p>テレビ番組『ウルトラマン ニュージェネレーションクロニクル』や、各種バラエティ番組に登場。また、スマホゲーム『アズールレーン』や『モンスターストライク』とのコラボ、企業CM（NTTドコモ、サントリーなど）にも出演し、メディアへの露出が非常に多いVTuberです。</p>
     </section>
 
     <a href="index.html" class="back-link">← トップページに戻る</a>
   </main>
+
+  <script>
+    // ページ読み込み時のスクロールアニメーション（オプション）
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = 0;
+      section.style.transform = 'translateY(20px)';
+    });
+
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('section').forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.style.transition = 'all 0.8s ease';
+          section.style.opacity = 1;
+          section.style.transform = 'translateY(0)';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
