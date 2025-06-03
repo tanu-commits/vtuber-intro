@@ -79,17 +79,23 @@
       height: 100%;
       border-radius: 10px;
     }
-    .back-link {
-      display: block;
-      text-align: center;
-      margin: 2rem 0;
-      font-weight: bold;
-      color: #f57f17;
-      text-decoration: none;
-    }
-    .back-link:hover {
-      text-decoration: underline;
-    }
+.back-link {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #f57f17;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+.back-link:hover {
+  background-color: #ef6c00;
+}
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
